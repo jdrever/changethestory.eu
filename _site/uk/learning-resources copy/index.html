@@ -7,23 +7,40 @@
     <meta name="description" content="" />
     <link rel="stylesheet" type="text/css" href="/css/changethestory.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-120891818-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170295086-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-120891818-1");
-    </script>
+    gtag('config', 'UA-170295086-1');
+  </script>
   </head>
 
   <body>
+<nav>
+                <ul>
+                    <li>
+                        <a href="/uk/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/uk/learning-resources">Learning Resources</a>
+                    </li>
+                    <li>
+                        <a href="/uk/assessement">Assessement</a>
+                    </li>
+                    <li>
+                        <a href="/uk/teacher-support">Teacher Support</a>
+                    </li>
+                    <li>
+                        <a href="/uk/about/">About the Project</a>
+                    </li>
+                    <li>
+                        <a href="/uk/contact/">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
     <main style="max-width: 95%; padding: 0em;">
       <div class="landing-logo">
         <a href="/">
@@ -34,7 +51,14 @@
         /></a>
         <p>Change the Story</p>
       </div>
-      {{ content }}
+      <p>This is the main content in English for the learning resources page.</p>
+
+      
+      <h2>Test</h2>
+      <p>Resource Content</p>
+      <p><a href="https://cdn.sanity.io/files/3vgpwmyb/production/c46c22df25487c2e768d5efab4be7c3494f24009.docx">Download</a></p>
+      
+
       <form id="ContactForm" method="post" data-netlify="true" action="/thanks/">
         <div>
           <label for="name">

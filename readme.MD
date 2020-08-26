@@ -1,0 +1,1 @@
+To debug: $env:DEBUG='=Eleventy*';npx @11ty/eleventy

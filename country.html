@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+
+---
+
+{{ country.name }}
+
+{{ country.language }}
+
+<ul>
+{% for item in homepages %}
+  <li>{{ item.mainContent | localeContent  }}</li>
+{% endfor %}
+</ul>
+
+
+<p>Test  {{ homepages }}</p>
+{% if homepages.mainContent %}
+{{ (homepages[0].mainContent.en | sanityToHTML) | safe  }}
+{% endif %}

@@ -4,19 +4,35 @@ body {
     line-height: 1.5em;
 }
 
+main{
+	max-width: 60%; padding: 0em;
+}
 
 div.landing-logo
 {
 	text-align:center;
 }
 
-div.landing-logo a {
-	margin:0em;
-}
 
 div.landing-logo p {
 	font-size:1.5em;
 	margin:0em;
+}
+
+div.logo
+{
+	text-align:center;
+	float:left;
+}
+
+div.logo a {
+	margin:0em;
+}
+
+div.logo p {
+	font-size:0.8em;
+	margin:0em;
+	font-weight:bold;
 }
 
 
@@ -94,26 +110,19 @@ h2
 }
 
 
-div.partnergrid
-{
-	margin:1em;
-}
-
-div.partnergrid div
-{
-	border:1px dotted gray;
-	border-radius:10px;
-	padding:1em;
-	margin-bottom:1em;
-}
 
 div.sidemenu
 {
 	float:right;
 	background-color:lightgray;
 	padding:0.5em;
-	width:20%;
+	width:25%;
 	border-bottom-left-radius:10px;	
+}
+
+div.sidemenu a
+{
+	font-size:0.7em;
 }
 
 .grid {
@@ -130,6 +139,7 @@ div.sidemenu
     text-align:center;
 }
 
+
 footer
 {
 	padding:2em;
@@ -140,8 +150,87 @@ footer p.eu
 	text-align:center;width:250px;font-size:0.6em; line-height:1em;
 }
 
+#partners div {
 
-@media all and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	padding:0.2em;
+
+}
+#partners div a{
+	text-decoration:none;
+	padding:0em;
+	margin:0em;
+}
+
+
+form {
+	margin: 0 auto;
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+}
+
+form ol
+{
+	padding:0em;
+}
+
+form li
+{
+	list-style: none;
+}
+
+form li.submit-buttons
+{
+	text-align:right;
+	padding:1em;
+}
+
+form p.required
+{
+	color: #a6342c;
+}
+
+input, label {
+    display:block;
+}
+
+input, textarea {
+	font: 1em sans-serif;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+input[type=checkbox], input[type=radio] 
+{
+	width: auto;
+	border: none;
+}
+
+input:focus, textarea:focus {
+	border-color: #000;
+}
+
+textarea {
+	vertical-align: top;
+	width:250px;
+	height: 5em;
+	resize: vertical;
+}
+
+
+fieldset{
+	border:none;
+}
+
+button {
+	margin: 20px 0 0 124px;
+}
+
+
+@media all and (max-width: 649px) {
 	
     .grid {
         /* On small screens, we are no longer using row direction but column */
@@ -183,7 +272,8 @@ footer p.eu
 	
 	main
     { 
-        padding: 0em; 
+		padding: 0em; 
+		max-width: 95%; 
     }
 
 	
@@ -201,6 +291,8 @@ footer p.eu
 	}
 }
 
+
+
 @media all and (max-width: 500px) {
 	header p.tagline
 	{
@@ -213,62 +305,3 @@ footer p.eu
 	
 }
 
-#partners div {
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#partners div a{
-	text-decoration:none;
-}
-
-
-form {
-	margin: 0 auto;
-	width: 500px;
-	padding: 1em;
-	border: 1px solid #CCC;
-	border-radius: 1em;
-}
-
-label span {
-	display: inline-block;
-	width: 120px;
-	text-align: right;
-}
-
-input, textarea {
-	font: 1em sans-serif;
-	width: 250px;
-	box-sizing: border-box;
-	border: 1px solid #999;
-}
-
-input[type=checkbox], input[type=radio] 
-{
-		width: auto;
-		border: none;
-	}
-
-	input:focus, textarea:focus {
-		border-color: #000;
-	}
-
-textarea {
-	vertical-align: top;
-	height: 5em;
-	resize: vertical;
-}
-
-fieldset {
-	width: 250px;
-	box-sizing: border-box;
-	margin-left: 136px;
-	border: 1px solid #999;
-}
-
-button {
-	margin: 20px 0 0 124px;
-}
