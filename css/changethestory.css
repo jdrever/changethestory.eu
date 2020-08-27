@@ -27,6 +27,7 @@ div.logo
 
 div.logo a {
 	margin:0em;
+	text-decoration-line: none;
 }
 
 div.logo p {
@@ -52,6 +53,7 @@ div.taglinebox
 p.tagline
 {
 	font-size:2em;
+	text-align:center;
 }
 
 nav {
@@ -81,7 +83,7 @@ nav > ul > li > a {
 main
 {
 	display: block;
-    max-width: 35em;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -150,10 +152,17 @@ footer p.eu
 	text-align:center;width:250px;font-size:0.6em; line-height:1em;
 }
 
-#partners div {
+#partners
+{
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+
+#partners div  {
 
     display: flex;
-    justify-content: center;
+	justify-content: center;
 	align-items: center;
 	padding:0.2em;
 
@@ -229,6 +238,11 @@ button {
 	margin: 20px 0 0 124px;
 }
 
+@media all and (max-width: 1024px) {
+	main{
+		max-width: 80%;
+	}
+}
 
 @media all and (max-width: 649px) {
 	
@@ -258,25 +272,19 @@ button {
     {
         text-align:left;
     }
-    nav > ul > li > a {
+	nav > ul > li > a 
+	{
         line-height:0.8em;
         padding: 0.2em 0.2em;
         font-size:1.5em;
     }
 	
-    heading
-	{
-		margin:0em;
-		padding:0em;
-	}
 	
 	main
     { 
 		padding: 0em; 
-		max-width: 95%; 
+		max-width: 95%; 	
     }
-
-	
 
 	div.sidemenu
 	{
@@ -289,18 +297,37 @@ button {
 		margin:0em;
 		padding:0em;
 	}
+
+	#partners div  {
+
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding:0.2em;
+
+	}
+
+	div.eu
+	{
+		flex-wrap: wrap;
+	}
 }
 
 
 
 @media all and (max-width: 500px) {
-	header p.tagline
+	p.tagline
 	{
-		line-height:0.8em;
-		font-size:0.9em;
+		font-size:0.7em;
 	}
 	.large {
 		display: none;
+	}
+	nav {
+		border-top:2px dotted #000000;
+	}
+	footer{
+		padding:0em;
 	}
 	
 }
