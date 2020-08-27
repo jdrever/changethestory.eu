@@ -5,7 +5,12 @@ body {
 }
 
 main{
-	max-width: 60%; padding: 0em;
+	display: block;
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
 }
 
 div.landing-logo
@@ -150,6 +155,11 @@ footer
 footer p.eu
 {
 	text-align:center;width:250px;font-size:0.6em; line-height:1em;
+}
+
+div.eu img
+{
+	padding:0.5em;
 }
 
 #partners
