@@ -16,7 +16,7 @@
         {% for country in countries %}
 
           <div class="grid-cell" style="border-style:none;flex: 0 0 auto; ">
-            <a href="{{ country.name | slug }}"><img src="{{ country.flagImageUrl }}" alt="{{ country.name}} flag" style="border: 1px solid gray"/><br/>{{ country.name }}</a>
+            <a href="{{ country.name | slug }}" rel="noopener"><img src="{{ country.flagImageUrl }}" alt="{{ country.name}} flag" style="border: 1px solid gray"/><br/>{{ country.name }}</a>
           </div>
         {% endfor %}
 
