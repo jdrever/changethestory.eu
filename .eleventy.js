@@ -1,5 +1,5 @@
 const blocksToHtml = require('@sanity/block-content-to-html')
-
+const CleanCSS = require("clean-css");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images/");
@@ -17,6 +17,10 @@ module.exports = function(eleventyConfig) {
         blocks: value,
       })
     })
+
+    eleventyConfig.addFilter("cssmin", function(code) {
+      return new CleanCSS({}).minify(code).styles;
+    });
     return {
       templateFormats: [
         "md",
