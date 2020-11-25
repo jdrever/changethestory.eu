@@ -13,6 +13,8 @@ exports.handler = async function(event, context) {
     const querystring = event.queryStringParameters;
     const queryName = querystring.name;
 
+    console.log(`queryName is ${queryName}`);
+
     const query = `
     *[ _type == "story" && name == "'+queryName+'" && !(_id in path("drafts.**")) ]{
        name,
