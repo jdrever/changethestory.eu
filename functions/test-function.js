@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
     const queryName = querystring.name;
 
     const query = `
-    *[ _type == "story" && name="'+queryName+'" && !(_id in path("drafts.**")) ]{
+    *[ _type == "story" && name == "'+queryName+'" && !(_id in path("drafts.**")) ]{
        name,
        description,
        content,
