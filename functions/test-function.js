@@ -16,12 +16,13 @@ exports.handler = async function(event, context) {
     console.log(`queryName is ${queryName}`);
 
     const query = `
-    *[ _type == "story" && name == "'+queryName+'" && !(_id in path("drafts.**")) ]{
+    *[ _type == "story" && name == "`+queryName+`" && !(_id in path("drafts.**")) ]{
        name,
        description,
        content,
     } | order(publishedAt desc)
   `
+  console.log(`query is ${query}`);
   const params = {}
 
     return {
