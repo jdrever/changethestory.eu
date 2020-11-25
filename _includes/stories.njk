@@ -1,0 +1,10 @@
+---
+layout: layout.njk
+---
+{{ content | safe }}
+
+{% for story in stories %}
+  <h2>{{ story.name }}</h2>
+  <p>{{ story.description.en | safe }}</p>
+  {{ story.content | sanityToHTML | safe }}
+{% endfor %}
