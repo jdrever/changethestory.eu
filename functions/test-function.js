@@ -10,8 +10,11 @@ const client = sanityClient({
 
 exports.handler = async function(event, context) {
 
+    const querystring = event.queryStringParameters;
+    const queryName = querystring.name;
+
     const query = `
-    *[ _type == "story" && !(_id in path("drafts.**")) ]{
+    *[ _type == "story" && name="'+queryName+'" && !(_id in path("drafts.**")) ]{
        name,
        description,
        content,
