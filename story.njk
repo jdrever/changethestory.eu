@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+pagination:
+    data: stories
+    size: 1
+    alias: story
+permalink: "stories/{{ story.name | slug }}/"
+---
+<h2>{{ story.name }}</h2>
+<p>{{ story.description.en | safe }}</p>
+{{ story.content | sanityToHTML | safe }}

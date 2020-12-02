@@ -14,6 +14,7 @@ module.exports = async function () {
     *[ _type == "story" && !(_id in path("drafts.**")) ]{
        name,
        description,
+       "mainImageUrl": mainImage.asset->url,
        content,
     } | order(publishedAt desc)
   `
