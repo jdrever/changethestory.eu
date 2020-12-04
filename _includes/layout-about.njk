@@ -2,6 +2,7 @@
 layout: layout.njk
 ---
 
+{% if country=="uk" %}
 {% block sidemenu %}
   <div class="sidemenu">
     <ul class="sidemenu">
@@ -11,5 +12,6 @@ layout: layout.njk
     </ul>
   </div>
 {% endblock %}
+{% endif %}
 
 {{ content | safe }}
