@@ -1,7 +1,11 @@
+@import 'variables';
+
+
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Arial,Helvetica,serif;
+    font-family: $font-main;
     font-size: 1.25em;
-    line-height: 1.5em;
+		line-height: 1.5em;
+		color: $color-black-hole;
 }
 
 main{
@@ -58,30 +62,35 @@ p.tagline
 {
 	font-size:2em;
 	text-align:center;
+	font-family: $font-soft;
+	line-height: 1.1em;
 }
 
 nav {
-	border-bottom:2px dotted #000000;
-	width:100%;
-    font-size:0.75em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+    font-size: 13px;
     margin: 0;
     overflow: hidden;
     text-align: right;
 }
+
 nav ul{
 	margin: 0;
 	padding: 0;
 }
+
 nav ul li {
 	display: inline-block;
-	list-style-type: none;
+	list-style: none outside none;
 }
-nav > ul > li > a {
-	color: #000000;
+
+nav a {
+	color: $color-black-hole;
 	display: block;
-	line-height: 2em;
 	padding: 0.5em 0.5em;
 	text-decoration: none;
+	border-bottom: 3px dotted $color-sunshine;
 }
 
 main
@@ -104,18 +113,30 @@ a.visited{
     color:black;
 }
 
-h1
-{
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	line-height:1.1em;
+	color: $color-deep-space;
 }
 
-h2
-{
-	font-size:1.5em;
-	line-height:1.1em;
+h1, .h1, h2, .h2 {
+	font-family: $font-soft;
 }
 
+h1, .h1 {
+	font-size: 57px;
+}
 
+h2, .h2 {
+	font-size: 41px;
+}
+
+h3, .h3 {
+	font-size: 34px;
+}
+
+h4, .h4 {
+	font-size: 25px;
+}
 
 div.sidemenu
 {
@@ -255,10 +276,14 @@ button {
 
 @media all and (max-width: 649px) {
 	
-    .grid {
-        /* On small screens, we are no longer using row direction but column */
-        flex-direction: column;
-    }
+	.grid {
+			/* On small screens, we are no longer using row direction but column */
+			flex-direction: column;
+	}
+
+	div.logo {
+		float: none;
+	}
 	
 	div.logobox
 	{
@@ -275,17 +300,21 @@ button {
 	{
 		line-height:1.5em;
 		font-size:1.3em;
+		
 	}
 	
-    nav
-    {
-        text-align:left;
-    }
-	nav > ul > li > a 
+	nav
 	{
-        line-height:0.8em;
-        padding: 0.2em 0.2em;
-        font-size:1.5em;
+			text-align:left;
+			margin-left: 20px;
+	}
+
+	nav > ul > li {
+		display: block;
+	}
+
+	nav > ul > li > a {
+      display: block;
     }
 	
 	
