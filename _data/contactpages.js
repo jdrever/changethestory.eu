@@ -10,9 +10,8 @@ const client = sanityClient({
 
 module.exports = async function () {
   const query = `
-    *[ _type == "homepage" && !(_id in path("drafts.**")) ]{
-       mainContent,
-       tagline
+    *[ _type == "contact" && !(_id in path("drafts.**")) ]{
+       mainContent
     } | order(publishedAt desc)
   `
   const params = {}

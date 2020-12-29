@@ -12,17 +12,24 @@
   </div>
 
   <div class="taglinebox">
-    <p class="tagline">Creating new climate stories across Europe</p>
+    <p class="tagline">
+      {% if country=="uk" %}
+        {{ homepages[0].tagline.en | safe }}
+      {% endif %}
+      {% if country=="hungary" %}
+        {{ homepages[0].tagline.hu | safe }}
+      {% endif %}    
+    </p>
   </div>
   <nav>
     <ul>
       {% block nav %}
       {% if country=="uk" %}
         {% include "menus/uk-menu.njk" %}
-        {% endif %}
-        {% if country=="hungary" %}
+      {% endif %}
+      {% if country=="hungary" %}
         {% include "menus/hu-menu.njk" %}
-        {% endif %}
+      {% endif %}
       {% endblock %}
     </ul>
   </nav>
