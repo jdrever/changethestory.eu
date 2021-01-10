@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 {% include "header.njk" %}
-  <div class="logo">
-    <a href="/">
-      <img
-            src="/images/spaceman_logo.svg"
-            alt="Change the Story logo"
-            style="background-size: 100px, 150px;"
-/>
-      <br/>Change the Story</a>
-  </div>
-
-  <div class="taglinebox">
-    <p class="tagline">
-      {% if country=="uk" %}
+<div class="header">
+  <div class="logo-tagline">
+    <a href="/" class="logo">
+      Change the Story 
+    </a>
+    <span class="tagline">
+    {% if country=="uk" %}
         {{ homepages[0].tagline.en | safe }}
       {% endif %}
       {% if country=="hungary" %}
         {{ homepages[0].tagline.hu | safe }}
-      {% endif %}    
-    </p>
+      {% endif %}
+    </span>
   </div>
   <nav>
-    <ul>
+    <ul class="nav">
       {% block nav %}
       {% if country=="uk" %}
         {% include "menus/uk-menu.njk" %}
@@ -33,14 +28,21 @@
       {% endblock %}
     </ul>
   </nav>
+</div>
+  
 
-  <main>
-    {% block sidemenu %}{% endblock %}
-    {% block maincontent %}{{ content | safe }}
+  <div class="container main-site-container">
+    <div class="row">
+      <main class="main-content">
+        {% block maincontent %}{{ content | safe }}
+      </main>
+       <div class="sidebar">
+        {% block sidemenu %}{% endblock %}
+      </div>
     {% endblock %}
 
-  </main>
-  <hr/>
+  </div>
+  
 {% include "footer.njk" %}
 </body>
 </html>
