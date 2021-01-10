@@ -1,0 +1,53 @@
+.header {
+	padding: 3em 0 2em 1em;
+	margin-bottom: 1em;
+	@include media-breakpoint-up(md) {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+}
+
+.nav {
+	align-self: flex-end;
+	text-transform: uppercase;
+	letter-spacing: 0.33px;
+	font-size: 0.875em;
+	padding-right: 1em;
+	border-bottom: 5px dotted $color-sunshine;
+	a {
+		color: $color-deep-space;
+		padding-bottom: 2em;
+		margin-bottom: -5px;
+		&:hover,
+		&:active,
+		&:focus {
+			color: shift-color($color-deep-space, $link-shade-percentage)
+		}
+		&.active {
+			border-bottom: 5px solid $color-sunshine;
+		}
+	}
+}
+
+.logo-tagline {
+	width: 320px;
+}
+
+.logo {
+	display: inline-block;
+	width: 320px;
+	height: 35px;
+	@include svg-background-image('cts-logo');
+	background-repeat: none;
+	background-size: 320px 35px;
+	background-position: center;
+	text-indent: -9999px;
+}
+
+.tagline {
+	display: block;
+	font-size: 0.875em;
+	color: $color-ocean;
+	letter-spacing: 0.25px;
+}

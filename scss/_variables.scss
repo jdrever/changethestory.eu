@@ -25,3 +25,14 @@ $cyan:    #0dcaf0 !default;
 
 $font-soft: 'Fredoka One', Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif;
 $font-main: 'Inter', -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+
+//bootstrap variable overrides
+$body-color: $black;
+$headings-font-weight: 700;
+$headings-color: $color-deep-space;
+
+$link-color: $orange;
+
+$btn-font-weight: bold;
+$btn-border-radius: 50vh;
+$btn-font-family: $font-main;
