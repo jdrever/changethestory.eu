@@ -9,20 +9,24 @@
 }
 
 .nav {
-	align-self: flex-end;
 	text-transform: uppercase;
-	letter-spacing: 0.33px;
-	font-size: 0.875em;
+	letter-spacing: 1px;
+	font-size: 0.75em;
 	padding-right: 1em;
+	margin-left: -1rem;
 	border-bottom: 5px dotted $color-sunshine;
+	@include media-breakpoint-up(md) {
+		margin-left: 0;
+	}
 	a {
-		color: $color-deep-space;
+		color: $color-organic;
 		padding-bottom: 2em;
 		margin-bottom: -5px;
+		font-weight: bold;
 		&:hover,
 		&:active,
 		&:focus {
-			color: shift-color($color-deep-space, $link-shade-percentage)
+			color: shift-color($color-organic, $link-shade-percentage)
 		}
 		&.active {
 			border-bottom: 5px solid $color-sunshine;
@@ -35,7 +39,11 @@
 }
 
 .logo {
-	display: inline-block;
+	display: block;
+	@include media-breakpoint-up(md) {
+		display: inline-block;
+	}
+	
 	width: 320px;
 	height: 35px;
 	@include svg-background-image('cts-logo');
