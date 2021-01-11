@@ -1,0 +1,23 @@
+.main-content {
+	@include media-breakpoint-up(sm) {
+    @include make-col(12);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+    .home & {
+      @include make-col(12);
+    }
+  }
+}
+
+.sidebar {
+	@include media-breakpoint-up(sm) {
+    @include make-col(12);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+    .home & {
+      display: none;
+    }
+  }
+}
