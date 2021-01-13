@@ -9,7 +9,7 @@ country: austria
 <table>
     <tr>
         <th>… Informationen finden, evaluieren und verwenden</th>
-        <th>… zum Thema Klimawandel in der Vergangenheit, Gegenwart und Zukunft</th>
+        <td>… zum Thema Klimawandel in der Vergangenheit, Gegenwart und Zukunft</td>
     </tr>        
     <tr>
         <th>… kritisch denken </th>
