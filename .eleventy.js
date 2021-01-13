@@ -39,8 +39,8 @@ const serializers = {
   {
     internalLink: ({mark, children}) => {
       const {slug = {}} = mark
-      const href = `/${slug.current}`
-      return '<a href={href}>{children}</a>'
+      const href = `/${slug}`
+      return `[${children}](${href})`
     }
   }
 }

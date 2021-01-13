@@ -20,6 +20,9 @@
       {% if country=="hungary" %}
         {{ homepages[0].tagline.hu | safe }}
       {% endif %}    
+      {% if country=="austria" %}
+        {{ homepages[0].tagline.de | safe }}
+      {% endif %}   
     </p>
   </div>
   <nav>
@@ -30,6 +33,9 @@
       {% endif %}
       {% if country=="hungary" %}
         {% include "menus/hu-menu.njk" %}
+      {% endif %}
+       {% if country=="austria" %}
+        {% include "menus/au-menu.njk" %}
       {% endif %}
       {% endblock %}
     </ul>

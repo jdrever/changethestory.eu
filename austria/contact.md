@@ -1,7 +1,8 @@
 ---
-layout: layout.njk
-country: hungary
+layout: layout-contact.njk
+country: austria
 ---
-<h1>{{ contactpage[0].title.hu }}</h1>
-Lépjen kapcsolatba a projekttel a következő címen: 
-[http://www.magosfa.hu/kapcsolat/](http://www.magosfa.hu/kapcsolat/)
+<h1>{{ contactpage[0].title.de }}</h1>
+{{ contactpage[0].mainContent.de | sanityToHTML | safe }}
+
+
