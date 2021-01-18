@@ -18,13 +18,31 @@ h1, .h1, h2, .h2 {
 	letter-spacing: 1px;
 }
 
-img {
+img,
+iframe {
 	max-width: 100%;
+}
+
+.small-link {
+	color: $gray-600;
+	font-size: 0.75em;
+}
+
+.back-link {
+	
+	&:before {
+		content: '\2190';
+		display: inline-block;
+		padding-right: 0.5em;
+	}
 }
 
 @import 'header';
 @import 'footer';
 @import 'layout';
 @import 'buttons';
+@import 'sidemenu';
 
 @import 'home';
+@import 'story';
+@import 'meta-information';

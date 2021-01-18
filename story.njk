@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout-fullwidth.njk
 country: uk
 pagination:
     data: stories
@@ -7,7 +7,35 @@ pagination:
     alias: story
 permalink: "stories/{{ story.name | slug }}/"
 ---
-<p><a href="/stories/">Stories</a></p>
-<h2>{{ story.name }}</h2>
-<p>{{ story.description.en | safe }}</p>
-{{ story.content | sanityToHTML | safe }}
+
+<div class="story-page">
+    <div class="story__header">
+        <p><a href="/stories/" class="small-link back-link">Back to stories</a></p>
+        <h1>{{ story.name }}</h1>
+    </div>
+    <div class="story__meta">
+        <ul class="list-unstyled meta-icon-list">
+            <li>
+                <i class="replace-with-icon replace-with-icon--date">Date:</i> 13 February 2021
+            </li>
+            <li>
+                <i class="replace-with-icon replace-with-icon--category">Category:</i> Category name
+            </li>
+            <li>
+                <i class="replace-with-icon replace-with-icon--school">School:</i> School name
+            </li>
+            <li>
+                <i class="replace-with-icon replace-with-icon--country">Country:</i> Country
+            </li>
+        </ul>
+    </div>
+    <div class="story__description">
+        <p>{{ story.description.en | safe }}</p>
+    </div>
+
+
+    <div class="story__content">
+    {{ story.content | sanityToHTML | safe }}
+    </div>
+
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout-fullwidth.njk
 country: uk
 ---
 {{ content | safe }}
@@ -11,6 +11,6 @@ country: uk
   <div class="grid-cell" style="border-style:none;flex: 0 0 auto; ">
     <a href="{{ story.name | slug }}" rel="noopener"><img src="{{ story.mainImageUrl }}" alt="{{ story.name}}" style="border: 1px solid gray"/><br/>{{ story.name }}</a>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 {% endfor %}

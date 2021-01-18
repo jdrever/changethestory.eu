@@ -10,6 +10,12 @@
   }
 }
 
+.main-content--fullwidth {
+	@include media-breakpoint-up(sm) {
+    @include make-col(12);
+  }
+}
+
 .sidebar {
 	@include media-breakpoint-up(sm) {
     @include make-col(12);
