@@ -1,7 +1,7 @@
 .header {
 	padding: 3em 0 2em 1em;
 	margin-bottom: 1em;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
@@ -14,12 +14,14 @@
 	font-size: 0.75em;
 	padding-right: 1em;
 	margin-left: -1rem;
+	margin-top: 1em;
 	border-bottom: 5px dotted $color-sunshine;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		margin-left: 0;
+		margin-top: 0;
 	}
 	a {
-		color: $color-organic;
+		color: $color-black-hole;
 		padding-bottom: 2em;
 		margin-bottom: -5px;
 		font-weight: bold;
@@ -29,7 +31,11 @@
 			color: shift-color($color-organic, $link-shade-percentage)
 		}
 		&.active {
-			border-bottom: 5px solid $color-sunshine;
+			color: $color-dust;
+			@include media-breakpoint-up(lg) {
+				color: $color-black-hole;
+				border-bottom: 5px solid $color-sunshine;
+			}
 		}
 	}
 }
@@ -40,7 +46,7 @@
 
 .logo {
 	display: block;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		display: inline-block;
 	}
 	

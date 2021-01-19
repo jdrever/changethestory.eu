@@ -10,6 +10,12 @@
   }
 }
 
+.main-content--twothirds {
+  @include media-breakpoint-up(lg) {
+    padding-right: 6em;
+  }
+}
+
 .main-content--fullwidth {
 	@include media-breakpoint-up(sm) {
     @include make-col(12);
