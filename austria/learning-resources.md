@@ -1,6 +1,6 @@
 ---
 layout: layout-resources.njk
-country: hungary
+country: austria
 ---
 <h1>{{ learningresourcepage[0].title.de }}</h1>
 {{ learningresourcepage[0].mainContent.de | sanityToHTML | safe }}
