@@ -25,7 +25,10 @@
       {% endif %}
       {% if country=="turkey" %}
         {{ homepages[0].tagline.tr | safe }}
-      {% endif %}         
+      {% endif %} 
+      {% if country=="italy" %}
+        {{ homepages[0].tagline.it | safe }}
+      {% endif %}        
     </p>
   </div>
   <nav>
@@ -43,6 +46,9 @@
       {% if country=="turkey" %}
         {% include "menus/tr-menu.njk" %}
       {% endif %}
+      {% if country=="italy" %}
+        {% include "menus/it-menu.njk" %}
+      {% endif %}      
       {% endblock %}
     </ul>
   </nav>
