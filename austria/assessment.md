@@ -3,8 +3,8 @@ layout: layout.njk
 country: austria
 ---
 
-<h1>{{ assessementpage[0].title.de }}</h1>
-{{ assessementpage[0].mainContent.de | sanityToHTML | safe }}
+<h1>{{ assessmentpage[0].title.de }}</h1>
+{{ assessmentpage[0].mainContent.de | sanityToHTML | safe }}
 <p>Durch „Change the Story“ können SchülerInnen …</p>
 <table>
     <tr>

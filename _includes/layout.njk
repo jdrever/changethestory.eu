@@ -22,7 +22,10 @@
       {% endif %}    
       {% if country=="austria" %}
         {{ homepages[0].tagline.de | safe }}
-      {% endif %}   
+      {% endif %}
+      {% if country=="turkey" %}
+        {{ homepages[0].tagline.tr | safe }}
+      {% endif %}         
     </p>
   </div>
   <nav>
@@ -34,8 +37,11 @@
       {% if country=="hungary" %}
         {% include "menus/hu-menu.njk" %}
       {% endif %}
-       {% if country=="austria" %}
+      {% if country=="austria" %}
         {% include "menus/au-menu.njk" %}
+      {% endif %}
+      {% if country=="turkey" %}
+        {% include "menus/tr-menu.njk" %}
       {% endif %}
       {% endblock %}
     </ul>
