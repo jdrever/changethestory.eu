@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout-twothirds-sidebar.njk
 country: italy
 ---
 <h1>{{ teachersupportpage[0].title.it }}</h1>
