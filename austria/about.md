@@ -1,5 +1,5 @@
 ---
-layout: layout-about.njk
+layout: layout-twothirds-sidebar.njk
 country: austria
 ---
 
