@@ -1,16 +1,22 @@
 ---
-layout: layout.njk
+layout: layout-fullwidth.njk
 country: uk
 ---
 {{ content | safe }}
 
 
+<div class="flex-grid">
 {% for storyrow in stories | batch(3) %}
-<div class="grid" style="flex-wrap:wrap;">
+
   {% for story in storyrow %}
-  <div class="grid-cell" style="border-style:none;flex: 0 0 auto; ">
-    <a href="{{ story.name | slug }}" rel="noopener"><img src="{{ story.mainImageUrl }}" alt="{{ story.name}}" style="border: 1px solid gray"/><br/>{{ story.name }}</a>
-  </div>
+    <div class="flex-grid__item card card--story">
+      <div class="card-image-background" style="background-image: url('{{ story.mainImageUrl }}');">
+      </div>
+      <div class="card-body">
+        <p class="card-text"><a href="{{ story.name | slug }}" rel="noopener">{{ story.name }}</a></p>
+      </div>
+    </div>
+  {% endfor %}
+
 {% endfor %}
 </div>
-{% endfor %}
