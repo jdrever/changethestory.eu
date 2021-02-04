@@ -1,5 +1,6 @@
 ---
-layout: layout-about.njk
+title: about
+layout: layout-twothirds-sidebar.njk
 country: uk
 ---
 

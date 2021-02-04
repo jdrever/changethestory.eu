@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<body class="{{ title }}">
+<body class="{{ title }} {{ country }}">
 {% include "header.njk" %}
 <div class="header">
   <div class="logo-tagline">
-    <a href="/" class="logo">
+    <a href="
+      {% if country=="uk" %}
+      /uk/
+      {% endif %}
+      {% if country=="hungary" %}
+      /hungary/
+      {% endif %}
+    " class="logo">
       Change the Story 
     </a>
     <span class="tagline">
@@ -22,44 +29,35 @@
       {% endif %} 
       {% if country=="italy" %}
         {{ homepages[0].tagline.it | safe }}
-      {% endif %}        
+      {% endif %}      
+    </span>
   </div>
   <nav>
-    <ul class="nav">
+    <ul class="nav header-nav">
       {% block nav %}
-      {% if country=="uk" %}
-        {% include "menus/uk-menu.njk" %}
-      {% endif %}
-      {% if country=="hungary" %}
-        {% include "menus/hu-menu.njk" %}
-      {% endif %}
-      {% if country=="austria" %}
-        {% include "menus/au-menu.njk" %}
-      {% endif %}
-      {% if country=="turkey" %}
-        {% include "menus/tr-menu.njk" %}
-      {% endif %}
-      {% if country=="italy" %}
-        {% include "menus/it-menu.njk" %}
-      {% endif %}      
+        {% if country=="uk" %}
+          {% include "menus/uk-menu.njk" %}
+        {% endif %}
+        {% if country=="hungary" %}
+          {% include "menus/hu-menu.njk" %}
+        {% endif %}
+        {% if country=="austria" %}
+          {% include "menus/au-menu.njk" %}
+        {% endif %}
+        {% if country=="turkey" %}
+          {% include "menus/tr-menu.njk" %}
+        {% endif %}
+        {% if country=="italy" %}
+          {% include "menus/it-menu.njk" %}
+        {% endif %}      
       {% endblock %}
     </ul>
   </nav>
 </div>
   
-
-  <div class="container main-site-container">
-    <div class="row">
-      <main class="main-content">
-        {% block maincontent %}{{ content | safe }}
-      </main>
-       <div class="sidebar">
-        {% block sidemenu %}{% endblock %}
-      </div>
-    {% endblock %}
-
-  </div>
+  {{ content | safe }}
   
+
 {% include "footer.njk" %}
 </body>
 </html>

@@ -2,30 +2,32 @@
 @import 'bootstrap/bootstrap';
 @import 'mixins';
 
-
-body {
-	font-family: $font-main;
-}
-
 .main-site-container {
 	@include svg-background-image('bottom-wobbles');
 	background-repeat: no-repeat;
 	background-position: right bottom;
 }
 
-h1, .h1, h2, .h2 {
-	font-family: $font-soft;
-	letter-spacing: 1px;
-}
-
-img {
+img,
+iframe {
 	max-width: 100%;
 }
 
+.back-link {
+	&:before {
+		content: '\2190';
+		display: inline-block;
+		padding-right: 0.5em;
+	}
+}
+
+@import 'typography';
 @import 'header';
 @import 'footer';
 @import 'layout';
 @import 'buttons';
-
+@import 'sidemenu';
 
 @import 'home';
+@import 'story';
+@import 'meta-information';
