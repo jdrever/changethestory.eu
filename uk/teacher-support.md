@@ -1,7 +1,7 @@
 ---
-layout: layout.njk
+layout: layout-twothirds-sidebar.njk
 country: uk
 ---
-# Teacher Support
-{{ assessementpage[0].mainContent.en | sanityToHTML | safe }}
+<h1>{{ teachersupportpage[0].title.en }}</h1>
+{{ teachersupportpage[0].mainContent.en | sanityToHTML | safe }}
 

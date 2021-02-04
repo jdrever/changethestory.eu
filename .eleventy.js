@@ -21,7 +21,8 @@ function getYouTubeID(url)
 
 
 const serializers = {
-  types: {
+  types: 
+  {
     youtube: props => 
     h('div', {
       innerHTML: `
@@ -33,10 +34,16 @@ const serializers = {
       h('div', { innerHTML: props.node.embedCode }
       )
     )
+  },
+  marks: 
+  {
+    internalLink: ({mark, children}) => {
+      const {slug = {}} = mark
+      const href = `/${slug}`
+      return `[${children}](${href})`
+    }
   }
 }
-
-
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images/");

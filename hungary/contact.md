@@ -1,7 +1,6 @@
 ---
-layout: layout.njk
+layout: layout-twothirds-sidebar.njk
 country: hungary
 ---
-# Kapcsolat
-Lépjen kapcsolatba a projekttel a következő címen: 
-[http://www.magosfa.hu/kapcsolat/](http://www.magosfa.hu/kapcsolat/)
+<h1>{{ contactpage[0].title.hu }}</h1>
+{{ contactpage[0].mainContent.hu | sanityToHTML | safe }}

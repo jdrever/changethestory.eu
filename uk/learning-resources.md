@@ -2,7 +2,7 @@
 layout: layout-resources.njk
 country: uk
 ---
-# Learning Resources
+<h1>{{ learningresourcepage[0].title.en }}</h1>
 
 {{ learningresourcepage[0].mainContent.en | sanityToHTML | safe }}
 
