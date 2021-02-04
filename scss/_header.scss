@@ -1,0 +1,61 @@
+.header {
+	padding: 3em 0 2em 1em;
+	margin-bottom: 1em;
+	@include media-breakpoint-up(md) {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+}
+
+.nav {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.75em;
+	padding-right: 1em;
+	margin-left: -1rem;
+	border-bottom: 5px dotted $color-sunshine;
+	@include media-breakpoint-up(md) {
+		margin-left: 0;
+	}
+	a {
+		color: $color-organic;
+		padding-bottom: 2em;
+		margin-bottom: -5px;
+		font-weight: bold;
+		&:hover,
+		&:active,
+		&:focus {
+			color: shift-color($color-organic, $link-shade-percentage)
+		}
+		&.active {
+			border-bottom: 5px solid $color-sunshine;
+		}
+	}
+}
+
+.logo-tagline {
+	width: 320px;
+}
+
+.logo {
+	display: block;
+	@include media-breakpoint-up(md) {
+		display: inline-block;
+	}
+	
+	width: 320px;
+	height: 35px;
+	@include svg-background-image('cts-logo');
+	background-repeat: none;
+	background-size: 320px 35px;
+	background-position: center;
+	text-indent: -9999px;
+}
+
+.tagline {
+	display: block;
+	font-size: 0.875em;
+	color: $color-ocean;
+	letter-spacing: 0.25px;
+}
