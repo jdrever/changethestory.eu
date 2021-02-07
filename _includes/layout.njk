@@ -15,21 +15,28 @@
       Change the Story 
     </a>
     <span class="tagline">
-    {% if country=="uk" %}
+      {% if country=="uk" %}
         {{ homepages[0].tagline.en | safe }}
-      {% endif %}
-      {% if country=="hungary" %}
-        {{ homepages[0].tagline.hu | safe }}
-      {% endif %}    
-      {% if country=="austria" %}
-        {{ homepages[0].tagline.de | safe }}
-      {% endif %}
-      {% if country=="turkey" %}
-        {{ homepages[0].tagline.tr | safe }}
+     
+      {% elseif country=="uk" %}
+          {{ homepages[0].tagline.en | safe }}
+     
+      {% elseif country=="hungary" %}
+          {{ homepages[0].tagline.hu | safe }}
+      
+      {% elseif country=="austria" %}
+          {{ homepages[0].tagline.de | safe }}
+    
+      {% elseif country=="turkey" %}
+          {{ homepages[0].tagline.tr | safe }}
+    
+      {% elseif country=="italy" %}
+          {{ homepages[0].tagline.it | safe }}
+
+      {% else %}
+        {{ homepages[0].tagline.en | safe }}
       {% endif %} 
-      {% if country=="italy" %}
-        {{ homepages[0].tagline.it | safe }}
-      {% endif %}      
+      
     </span>
   </div>
   <nav>
