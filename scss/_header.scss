@@ -41,7 +41,9 @@
 }
 
 .logo-tagline {
-	width: 320px;
+	@include media-breakpoint-up(sm) {
+		min-width:320px;
+	}
 }
 
 .logo {
@@ -50,11 +52,11 @@
 		display: inline-block;
 	}
 	
-	width: 320px;
-	height: 35px;
+	width: 291px;
+	height: 50px;
 	@include svg-background-image('cts-logo');
 	background-repeat: none;
-	background-size: 320px 35px;
+	background-size: 291px 50px;
 	background-position: center;
 	text-indent: -9999px;
 }
@@ -64,4 +66,7 @@
 	font-size: 0.875em;
 	color: $color-ocean;
 	letter-spacing: 0.25px;
+	position: relative; 
+	top: -1.5em;
+	left: 2.4em
 }
