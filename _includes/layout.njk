@@ -18,7 +18,7 @@
       {% if country=="uk" %}
         {{ homepages[0].tagline.en | safe }}
      
-      {% elseif country=="uk" %}
+      {% elseif country=="uk" or country=="stories" %}
           {{ homepages[0].tagline.en | safe }}
      
       {% elseif country=="hungary" %}
@@ -56,6 +56,9 @@
         {% endif %}
         {% if country=="italy" %}
           {% include "menus/it-menu.njk" %}
+        {% endif %}
+        {% if country=="stories" %}
+          {% include "menus/stories-menu.njk" %}
         {% endif %}      
       {% endblock %}
     </ul>

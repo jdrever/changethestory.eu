@@ -1,0 +1,26 @@
+---
+layout: layout-fullwidth.njk
+country: uk
+---
+{{ content | safe }}
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10649950.842335667!2d4.383405287499995!3d49.331597118167956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1613739404481!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+<div class="flex-grid">
+{% for storyrow in stories | batch(3) %}
+
+  {% for story in storyrow %}
+  <!--
+    <div class="flex-grid__item card card--story">
+      <div class="card-image-background" style="background-image: url('{{ story.mainImageUrl }}');">
+      </div>
+      <div class="card-body">
+        <p class="card-text"><a href="{{ story.name | slug }}" rel="noopener">{{ story.name }}</a></p>
+      </div>
+    </div>
+  -->
+  {% endfor %}
+
+{% endfor %}
+</div>

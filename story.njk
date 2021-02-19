@@ -30,7 +30,10 @@ permalink: "stories/{{ story.name | slug }}/"
         </ul>
     </div>
     <div class="story__description">
-        <p>{{ story.description.en | safe }}</p>
+        <h4>Who Created This Story?</h4>
+        <p>{{ story.who_created.en | safe }}</p>
+        <h4>How Was the Story Created?</h4>
+        <p>{{ story.how_created.en | safe }}</p>
     </div>
 
 

@@ -13,7 +13,8 @@ module.exports = async function () {
   const query = `
     *[ _type == "story" && !(_id in path("drafts.**")) ]{
        name,
-       description,
+       who_created,
+       how_created,
        "mainImageUrl": mainImage.asset->url,
        content,
     } | order(publishedAt desc)
