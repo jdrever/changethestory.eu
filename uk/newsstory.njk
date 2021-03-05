@@ -1,0 +1,13 @@
+---
+layout: layout-fullwidth.njk
+country: uk
+pagination:
+    data: UKnewsstories
+    size: 1
+    alias: newsstory
+permalink: "uk/news/{{ newsstory.title | slug }}/"
+---
+
+<a href="/uk/news/">News</a> 
+<h1>{{ newsstory.title }}</h1>
+ {{ newsstory.mainContent | sanityToHTML | safe }}
