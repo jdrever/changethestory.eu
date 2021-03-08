@@ -50,6 +50,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css/");
     eleventyConfig.addPassthroughCopy("documents/");
 
+    eleventyConfig.addFilter('categoryFilter', function(collection, category, value) {
+      if (!category) return collection;
+        const filtered = collection.filter(item => item.data.category == value)
+        return filtered;
+    });
+
 
     eleventyConfig.addFilter('localeContent', function(values,key)
     {

@@ -30,15 +30,30 @@ permalink: "stories/{{ story.name | slug }}/"
         </ul>
     </div>
     <div class="story__description">
+        {%- if story.who_created -%}
         <h4>Who Created This Story?</h4>
-        <p>{{ story.who_created.en | safe }}</p>
+        <p>{{ story.who_created | safe }}</p>
+        {%- endif -%}
+        {%- if story.who_created -%}
         <h4>How Was the Story Created?</h4>
-        <p>{{ story.how_created.en | safe }}</p>
+        <p>{{ story.how_created | safe }}</p>
+        {%- endif -%}
     </div>
 
 
     <div class="story__content">
     {{ story.content | sanityToHTML | safe }}
     </div>
-
 </div>
+{%- if storycomments %}
+    <h3>Comments</h3>
+    {%- for storycomment in storycomments -%}
+        {%- if storycomment.storyId==story.storyId -%}
+    <p>{{ storycomment.comment }}</p>
+    <p>Name: {{ storycomment.name}}<p>
+    <p>School: {{ storycomment.school }} </p>
+        {%- endif -%}
+    {%- endfor -%}
+{%- endif -%}
+
+{% include "storycommentsform.njk" %}
