@@ -41,7 +41,15 @@ const serializers = {
       const {slug = {}} = mark
       const href = `/${slug}`
       return `[${children}](${href})`
+    },
+    link: ({mark, children}) => {
+      // Read https://css-tricks.com/use-target_blank/
+      const { blank, href } = mark
+      return blank ?
+        h('a', {href: href, target:'_blank', rel: 'noopener'} , children )
+        : `[${children}](${href})`
     }
+
   }
 }
 
