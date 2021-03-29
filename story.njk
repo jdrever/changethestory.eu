@@ -43,9 +43,7 @@ permalink: "stories/{{ story.name | slug }}/"
 
     <div class="story__content">
     {{ story.content | sanityToHTML | safe }}
-    </div>
-</div>
-{%- if storycomments %}
+        {%- if storycomments %}
     <h3>Comments</h3>
     {%- for storycomment in storycomments -%}
         {%- if storycomment.storyId==story.storyId -%}
@@ -55,5 +53,8 @@ permalink: "stories/{{ story.name | slug }}/"
         {%- endif -%}
     {%- endfor -%}
 {%- endif -%}
-
 {% include "storycommentsform.njk" %}
+    </div>
+
+</div>
+
