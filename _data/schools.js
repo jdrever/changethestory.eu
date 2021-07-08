@@ -11,15 +11,11 @@ const client = sanityClient({
 
 module.exports = async function () {
   const query = `
-    *[ _type == "story" && !(_id in path("drafts.**")) ]{
-       "storyId" : _id,
+    *[ _type == "school" && !(_id in path("drafts.**")) ]{
        name,
-       who_created,
-       how_created,
-       country,
-       tags,
-       "mainImageUrl": mainImage.asset->url,
-       content,
+       description,
+       latitude,
+       longitude,
     } | order(publishedAt desc)
   `
   const params = {}
